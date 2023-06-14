@@ -118,3 +118,25 @@ span {
     margin-left: 16%;       
     font-size: 0.8rem;
 }
+
+.login-botton button{
+    width: 100%;
+    margin-top: 1rem;
+    border: none;
+    background-color: #159A9C;
+    padding: 0.63rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-botton button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.login-botton button:hover {
+    background-color: #159A9C;
+}
+
