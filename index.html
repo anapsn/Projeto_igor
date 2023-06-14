@@ -1,55 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/styletela.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="texto">
-            <h1>Bem-vindo(a) à <br> StickerWorld!</h1>
-
-
-                <p>Explore um mundo de diversão, criatividade e colecionismo <br> de figurinhas. Embarque nesta jornada única e descubra <br> uma infinidade de adesivos incríveis, que vão desde <br> personagens de filmes e séries até animais adoráveis, <br> esportes, memes e muito mais. <br>
-                
-                    Nossa plataforma online é o lugar perfeito para os amantes <br> de figurinhas se conectarem, compartilharem suas  <br>
-                    coleções e expandirem suas bibliotecas virtuais. <br>
-
-                    Então, prepare-se para explorar um mundo cheio <br> de adesivos incríveis e vivenciar a alegria de colecionar. <br>
-                    Faça login agora mesmo e mergulhe na StickerWorld! <br>
-Lembre-se: cada figurinha conta uma história, e estamos <br> aqui para ajudar você a criar a sua.
-                </p>
-
+        <div class="form-image">
+            <img src="css/assents/img/undraw_mobile_payments_re_7udl.svg" alt="">
         </div>
-        <div class="form-login">
+        <div class="form">
             <form action="#">
                 <div class="form-header">
                     <div class="title">
-                        <h1>LOGIN</h1>
+                        <h1>Cadastre-se</h1>
                     </div>
-                    <div class="input-group1">
-                        <div class="input-box">
-                            <label for="email">E-mail</label>
-                            <input id="email" type="text" name="email" required>
-                        </div>
-                        <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" required>
-                        </div>
-                    <div class="login-botton">
-                        <button><a href="#">Entrar</a></button>
+                    <div class="login-button">
+                        <button><a href="indextela.html">Entrar</a></button>
                     </div>
-                    
-                    <span>Não tem uma conta? <a href="tela-cadastro/index.html">Cadastre-se</a></span>
                 </div>
 
-                
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                    </div>
+
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="female" type="radio" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="male" type="radio" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="others" type="radio" name="gender">
+                            <label for="others">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="none" type="radio" name="gender">
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a> </button>
                 </div>
             </form>
         </div>
     </div>
 </body>
+
 </html>
