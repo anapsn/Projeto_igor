@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
 }
 
 body {
@@ -12,7 +13,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #B4BEC9;
+    background: #fff;
+    border-radius: 5px;
+    
 }
 
 .container{
@@ -20,6 +23,20 @@ body {
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0,0,0,.212);
+    border-radius: 5px;
+   
+}
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100px 100px;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 21rem;
 }
 
 .texto {
@@ -27,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #002333;
+    background-color: black;
 }
 .texto h1{
     margin: 0;
@@ -58,8 +75,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #DEEFE7;
+    background-color: #F3F3F3;
     padding: 3rem;
+    border-radius: 5px;
 }
 
 .imput-group1 {
@@ -123,7 +141,7 @@ span {
     width: 100%;
     margin-top: 1rem;
     border: none;
-    background-color: #159A9C;
+    background-color: #DA2535;
     padding: 0.63rem;
     border-radius: 5px;
     cursor: pointer;
