@@ -210,21 +210,21 @@ color: #292929;
 }
 
 .title button{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 10px 40px;
-gap: 10px;
-position: absolute;
-width: 292px;
-height: 60px;
-left: 146px;
-top: 349px;
-background: #DA2535;
-border-radius: 10px;
-cursor: pointer;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 10px;
+  position: absolute;
+  width: 292px;
+  height: 60px;
+  left: 146px;
+  top: 349px;
+  background: #DA2535;
+  border-radius: 10px;
+  cursor: pointer;
+  }
 
 .title a {
 width: 106px;
