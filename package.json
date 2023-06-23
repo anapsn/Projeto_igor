@@ -1,0 +1,26 @@
+{
+  "name": "projeto_igor",
+  "version": "1.0.0",
+  "description": "Site de comida Japonesa",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anapsn/Projeto_igor.git"
+  },
+  "keywords": [
+    "casadojapa"
+  ],
+  "author": "Ana Paula Silva Novais e Luiz Henrique Arruda Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anapsn/Projeto_igor/issues"
+  },
+  "homepage": "https://github.com/anapsn/Projeto_igor#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mssql": "^9.1.1"
+  }
+}
