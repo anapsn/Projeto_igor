@@ -1,98 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Formulário</title>
-    <link rel="stylesheet" href="css/styletela.css">
+    <title>Lading Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="form-image">
-            <img src="css/assents/img/img_cadastro.svg" alt="">
-        </div>
-        <div class="form">
-            <form action="#">
-                <div class="form-header">
-                    <div class="title">
-                        <h1>Cadastre-se</h1>
-                    </div>
-                    <div class="login-button">
-                        <button><a href="indextela.html">Entrar</a></button>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="firstname">Primeiro Nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                    </div>
-
-
-                    <div class="input-box">
-                        <label for="confirmPassword">Confirme sua Senha</label>
-                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
-                    </div>
-
-                </div>
-
-                <div class="gender-inputs">
-                    <div class="gender-title">
-                        <h6>Gênero</h6>
-                    </div>
-
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input id="female" type="radio" name="gender">
-                            <label for="female">Feminino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="male" type="radio" name="gender">
-                            <label for="male">Masculino</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="others" type="radio" name="gender">
-                            <label for="others">Outros</label>
-                        </div>
-
-                        <div class="gender-input">
-                            <input id="none" type="radio" name="gender">
-                            <label for="none">Prefiro não dizer</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
-                </div>
-            </form>
-        </div>
+    
+    <body>
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><span></span></label>
+        <label for="active" class="close"></label>
+        <div class="wrapper">
+          <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="indexcardapio.html">Cardápio</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="indextela.html">Entrar</a></li>
+    </ul>
     </div>
-</body>
+    <div class="texto-inicial">
+          <div class="title">
+            <div class="logo">
+                
+            </div>
+         <h2>Comida Oriental</h2>
+         <p>A culinária Japonesa é bastante equilibrada,
+            sendo muito rica em <br>
+             peixes (ômega 3),vegetais, massas <br>
+             e ingredientes frescos.</p>
 
+             <button><a href="indexcardapio.html">Cardápio</a></button>
+            
+          </div>
+    </div>
+    <div class="img-lat">
+        <div class="img-baixo">
+            <div class="title-lat">
+               <h2>Feita de forma
+                Tradicional</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>
+                incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+        </div>
+    </div>  
+    <div class="title-principal">
+        <h2>Mais populares</h2>
+    </div>
+
+    <article class="card-primeiro">
+        <div class="card-img">
+          <img src="css/assents/img/img-1.png" alt="Prato">
+        </div>
+        <p class="nome-do-prato">
+            Ramen Apimentado
+        </p>
+      
+        <p class="descricao-prato">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      
+        <p class="preco-do-prato">
+          R$ 30
+        </p>
+      </article>
+      <article class="card-segundo">
+        <div class="card-img">
+          <img src="css/assents/img/img-2.png" alt="Prato">
+        </div>
+        <p class="nome-do-prato">
+            Ramen Tradicional
+        </p>
+      
+        <p class="descricao-prato">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      
+        <p class="preco-do-prato">
+          R$ 30
+        </p>
+      </article>
+      <article class="card-terceiro">
+        <div class="card-img">
+          <img src="css/assents/img/img-3.png" alt="Prato">
+        </div>
+        <p class="nome-do-prato">
+            Ramen Frango
+        </p>
+      
+        <p class="descricao-prato">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      
+        <p class="preco-do-prato">
+          R$ 30
+        </p>
+      </article>
+
+      <div class="titulo-segundario">
+        <h2>Comentários</h2>
+        <div class="container1">
+            <p class="nome1">Daniele Almeida</p>
+            <p class="descricao-comentario1">Ótimo serviço! Encantada com a qualidade dos pratos.</p>
+            <div class="container2">
+                <p class="nome2">Ricardo França</p>
+                <p class="descricao-comentario2">Não é apenas a comida excelente, o serviço torna a experiência especial.</p>
+                <div class="imagem">
+                    <div class="imagem2">
+                        
+                    </div>
+                    <div class="estrelas1">
+                        <div class="estrelas2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</body>
 </html>
