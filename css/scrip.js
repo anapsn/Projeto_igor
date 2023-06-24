@@ -5,10 +5,15 @@ for(var i = 0; i < removeProduto.length; i++) {
     })
 }
 
+    let totalGeral = 0
+    const cartProducts = document.getElementsByClassName("card=primary")
+    for(var i = 0; i <cartProducts.length; i++ ) {
+        //console.log(cartProducts [i])
+       const valor = cartProducts[i].getElementsByClassName("card=primary-valor")[0].innerText.replace("R$", "").replace(",", ".")
+       const produto = cartProducts[i].getElementsByClassName("bx bx-minus")[0].value
+       
+       totalGeral = totalGeral + (valor + produto)
+    }
 
-const cartProducts = document.getElementsByClassName("card=primary")
-for(var i = 0; i <cartProducts.length; i++ ) {
-    //console.log(cartProducts [i])
-   const valor = valor[i].getElementsByClassName("card=primary-valor")[0].innerText
-    console.log(valor)
-}
+    console.log(totalGeral)
+
