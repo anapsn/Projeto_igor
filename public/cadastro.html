@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Formulário</title>
-    <link rel="stylesheet" href="css/styletela.css">
+    <link rel="stylesheet" href="/css/styletela.css">
+    
 </head>
 
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="css/assents/img/img_cadastro.svg" alt="">
+            <img src="../css/assents/img/img_cadastro.svg" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="/cadastro" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
@@ -66,29 +67,29 @@
 
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input id="female" type="radio" name="gender">
+                            <input id="female" type="radio" name="gender" value="Feminino">
                             <label for="female">Feminino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="male" type="radio" name="gender">
+                            <input id="male" type="radio" name="gender" value="Masculino">
                             <label for="male">Masculino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="others" type="radio" name="gender">
+                            <input id="others" type="radio" name="gender" value="Outros">
                             <label for="others">Outros</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="none" type="radio" name="gender">
+                            <input id="none" type="radio" name="gender" value="Nao dizer">
                             <label for="none">Prefiro não dizer</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
+                    <button type="submit">Continuar</button>
                 </div>
             </form>
         </div>
