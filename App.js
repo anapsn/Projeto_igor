@@ -35,12 +35,13 @@ app.get('/perfil', (req, res) => {
 
   if (usuario) {
     // O usuário está logado
-    res.send(`Bem-vindo(a) ao seu perfil, ${usuario.firstname}!`);
+    res.send(`Bem-vindo(a) ao seu perfil, ${usuario.primeiro_nome} ${usuario.ultimo_nome} ${usuario.telefone} ${usuario.email}!`);
   } else {
     // O usuário não está logado
     res.send('Faça login para acessar o perfil.');
   }
 });
+
 
 
 
