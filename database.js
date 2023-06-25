@@ -37,19 +37,22 @@ async function validarLogin(email, password) {
     const result = await sql.query(query);
 
     if (result.recordset.length > 0) {
-      
-      console.log('Usuário logado com sucesso!');
-      return true; // Login válido
-      
+      const usuario = result.recordset[0];
+      return {
+        primeiro_nome: usuario.firstname,
+        ultimo_nome: usuario.lastname,
+        email: usuario.email,
+        telefone: usuario.number,
+      };
     } else {
-      console.log('Deu ruim!');
-      return false; // Login inválido
+      return null; // Login inválido
     }
   } catch (error) {
     console.error('Erro ao validar o login:', error);
-    return false; // Login inválido (ocorreu um erro)
+    return 'Ocorreu um erro ao validar o login'; // Mensagem de erro
   }
 }
+
 
 async function obterDadosUsuario(email) {
   try {

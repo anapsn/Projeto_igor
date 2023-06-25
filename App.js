@@ -6,6 +6,7 @@ const session = require('express-session');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+
 app.use(session({
   secret: 'seu_segredo_aqui',
   resave: false,
@@ -34,7 +35,7 @@ app.get('/perfil', (req, res) => {
 
   if (usuario) {
     // O usuário está logado
-    res.send(`Bem-vindo(a) ao seu perfil, ${usuario.nome}!`);
+    res.send(`Bem-vindo(a) ao seu perfil, ${usuario.firstname}!`);
   } else {
     // O usuário não está logado
     res.send('Faça login para acessar o perfil.');
@@ -63,27 +64,12 @@ app.post('/login', async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  console.log('Email:', email);
-  console.log('Senha:', password);
+  const usuario = await database.validarLogin(email, password);
 
-  const loginValido = await database.validarLogin(email, password);
-
-  if (loginValido) {
-    // Recuperar os dados do usuário do banco de dados
-    const userData = await database.obterDadosUsuario(email);
-
-    if (userData) {
-      // Armazenar os dados relevantes na sessão do usuário
-      req.session.usuario = {
-        email: userData.email,
-        nome: userData.nome,
-        // Outros dados relevantes que você queira armazenar
-      };
-
-      res.send('Login bem-sucedido!');
-    } else {
-      res.send('Usuário não encontrado.');
-    }
+  if (usuario) {
+    req.session.usuario = usuario; // Salvar dados do usuário na sessão
+    res.send('Login bem-sucedido!');
+    console.log('Usuario logado com sucesso!');
   } else {
     res.send('Credenciais inválidas. Tente novamente.');
   }
