@@ -21,6 +21,7 @@
   "homepage": "https://github.com/anapsn/Projeto_igor#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "mssql": "^9.1.1"
   }
 }
