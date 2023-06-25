@@ -17,6 +17,11 @@ app.listen(port, () => {
 app.get('/cadastro', (req, res) => {
   res.sendFile(__dirname + '/public/cadastro.html');
 });
+// Rota para exibir o formulário de login
+app.get('/login', (req, res) => {
+  res.sendFile(__dirname + '/public/login.html');
+});
+
 
 database.conectar();
 
@@ -31,4 +36,21 @@ app.post('/cadastro', (req, res)=>{
     database.cadastrarUsuario(firstname, lastname, email, number, password, gender);
     res.send('Cadastro realizado com sucesso!');
 
-})
+
+});
+
+app.post('/login', async (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  console.log('Email:', email);
+  console.log('Senha:', password);
+
+  const loginValido = await database.validarLogin(email, password);
+
+  if (loginValido) {
+    res.send('Login bem-sucedido!');
+  } else {
+    res.send('Credenciais inválidas. Tente novamente.');
+  }
+});
