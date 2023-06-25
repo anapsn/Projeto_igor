@@ -33,12 +33,15 @@ async function cadastrarUsuario(firstname, lastname, email, number, password, ge
 
 async function validarLogin(email, password) {
   try {
-    const query = `SELECT * FROM usuarios WHERE email = '${email}' AND senha = '${password}'`;
+    const query = `SELECT * FROM usuarios WHERE email = '${email}' AND password = '${password}'`;
     const result = await sql.query(query);
 
     if (result.recordset.length > 0) {
+      console.log('Usuário logado com sucesso!');
       return true; // Login válido
+      
     } else {
+      console.log('Deu ruim!');
       return false; // Login inválido
     }
   } catch (error) {
