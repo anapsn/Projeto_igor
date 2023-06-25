@@ -65,7 +65,7 @@ body {
 }
 
 .login-button button:hover {
-    background-color: #6b63fff1;
+    background-color: #DA2535;
 }
 
 .login-button button a {
@@ -159,7 +159,7 @@ body {
 }
 
 .continue-button button:hover {
-    background-color: #6b63fff1;
+    background-color: #DA2535;
 }
 
 .continue-button button a {
