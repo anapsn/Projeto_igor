@@ -31,7 +31,24 @@ async function cadastrarUsuario(firstname, lastname, email, number, password, ge
   }
 }
 
+async function validarLogin(email, password) {
+  try {
+    const query = `SELECT * FROM usuarios WHERE email = '${email}' AND senha = '${password}'`;
+    const result = await sql.query(query);
+
+    if (result.recordset.length > 0) {
+      return true; // Login válido
+    } else {
+      return false; // Login inválido
+    }
+  } catch (error) {
+    console.error('Erro ao validar o login:', error);
+    return false; // Login inválido (ocorreu um erro)
+  }
+}
+
 module.exports = {
   conectar: conectar,
-  cadastrarUsuario: cadastrarUsuario
+  cadastrarUsuario: cadastrarUsuario,
+  validarLogin: validarLogin
 };
