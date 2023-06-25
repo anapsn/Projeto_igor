@@ -22,7 +22,7 @@ header {
     top:0;
     right:0;
     height:60px;
-    background-color:#399ade;
+    background-color:#000;
     display:none;
     justify-content: flex-end;
     align-items: center;
@@ -48,7 +48,7 @@ header {
 }
 
 aside {
-    background-color:#9ccbe6;
+    background-color:#FFF;
     width:0vw;
     font-family:'Hepta Slab', Helvetica, Arial;
     transition:all ease .2s;
@@ -110,7 +110,7 @@ h1 {
     height:50px;
     line-height:50px;
     border-radius:25px;
-    background-color:#388bc5;
+    background-color:#000;
     text-align:center;
     color:#FFF;
     font-size:22px;
@@ -120,7 +120,7 @@ h1 {
 }
 
 .models-item a:hover .models-item--add {
-    background-color:#244c88;
+    background-color:#DA2535;
 }
 
 .models-item--price {
@@ -229,7 +229,7 @@ h1 {
 }
 
 .modelsInfo--size.selected {
-    background-color:#399ade;
+    background-color:#000;
     color:#FFF;
 }
 
@@ -282,7 +282,7 @@ h1 {
     margin-top:30px;
     padding:20px 30px;
     border-radius:20px;
-    background-color:#48d05f;
+    background-color:#000;
     color:#FFF;
     display:inline-block;
     cursor:pointer;
@@ -290,7 +290,7 @@ h1 {
 }
 
 .modelsInfo--addButton:hover {
-    background-color:#32a345;
+    background-color:#DA2535;
 }
 
 .modelsInfo--cancelButton {
@@ -373,17 +373,17 @@ h1 {
 .cart--finalizar {
     padding:20px 30px;
     border-radius:20px;
-    background-color:#48d05f;
+    background-color:#DA2535;
     color:#FFF;
     cursor:pointer;
     text-align:center;
     margin-top:20px;
-    border:2px solid #63f77c;
+    border:2px solid #EEE;
     transition: all ease .2s;
 }
 
 .cart--finalizar:hover {
-    background-color:#35af4a;
+    background-color:#DA2535;
 }
 
 @media (max-width:1000px) {
