@@ -37,6 +37,7 @@ async function validarLogin(email, password) {
     const result = await sql.query(query);
 
     if (result.recordset.length > 0) {
+      
       console.log('Usuário logado com sucesso!');
       return true; // Login válido
       
@@ -50,8 +51,26 @@ async function validarLogin(email, password) {
   }
 }
 
+async function obterDadosUsuario(email) {
+  try {
+    const request = new sql.Request();
+    const query = `SELECT * FROM usuarios WHERE email = '${email}'`;
+    const result = await request.query(query);
+
+    if (result.recordset.length > 0) {
+      return result.recordset[0]; // Retorna o primeiro registro encontrado
+    } else {
+      return null; // Usuário não encontrado
+    }
+  } catch (error) {
+    console.error('Erro ao obter dados do usuário:', error);
+    return null; // Ocorreu um erro ao consultar o banco de dados
+  }
+}
+
 module.exports = {
   conectar: conectar,
   cadastrarUsuario: cadastrarUsuario,
-  validarLogin: validarLogin
+  validarLogin: validarLogin,
+  obterDadosUsuario: obterDadosUsuario
 };
