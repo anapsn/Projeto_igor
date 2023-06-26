@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const database = require('./database');
+const database = require('./database.js');
 const session = require('express-session');
 
 app.use(express.urlencoded({ extended: true }));
@@ -10,7 +10,7 @@ app.use(express.static('public'));
 app.use(session({
   secret: 'seu_segredo_aqui',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: true
 }));
 
 // Iniciar o servidor
@@ -95,3 +95,18 @@ app.post('/login', async (req, res) => {
   }
 });
 
+app.post('/api/pedido', async (req, res) => {
+  const pedidoData = req.body;
+
+  try {
+    // Chame a função apropriada em database.js para cadastrar o pedido
+    await database.cadastrarPedido(pedidoData);
+
+    // Responda com um status de sucesso
+    res.sendStatus(200);
+  } catch (error) {
+    // Em caso de erro, responda com um status de erro e uma mensagem de erro
+    console.error('Erro ao cadastrar pedido:', error);
+    res.status(500).send('Erro ao cadastrar pedido.');
+  }
+});

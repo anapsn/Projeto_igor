@@ -194,3 +194,55 @@ function updateCart() {
         c('aside').style.left = '100vw';
     }
 }
+
+
+
+
+
+const finalizarCompra = async () => {
+    c('.cart--finalizar').addEventListener('click', async () => {
+      console.log('Finalizar compra');
+  
+      // Obtém o email do usuário logado na sessão
+    //   const emailUsuarioLogado = req.session.usuario.email; // Substitua 'req.session.usuario.email' pelo caminho correto para o email do usuário na sessão
+  
+      // Obtém o ID do usuário com base no email
+    //   const dadosUsuario = await obterDadosUsuario(emailUsuarioLogado);
+      if (dadosUsuario) {
+        const usuarioId = dadosUsuario.id; // Substitua 'id' pelo nome da coluna que contém o ID do usuário
+        console.log('ID do usuário:', usuarioId);
+  
+        // Restante do código
+        c('aside').classList.remove('show');
+        c('aside').style.left = '100vh';
+  
+        // Registrar o pedido no banco de dados
+        try {
+          const pedidoData = {
+            usuarioId: usuarioId,
+            produtos: cart // Substitua 'produtos' pelo nome do campo que representa os produtos do pedido
+          };
+          await fetch('/api/pedido', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(pedidoData),
+          });
+          console.log('Pedido cadastrado com sucesso!');
+          // Realize as ações apropriadas após o cadastro do pedido
+        } catch (error) {
+          console.error('Erro ao cadastrar pedido:', error);
+          // Realize as ações apropriadas em caso de erro
+        }
+      } else {
+        console.log('Usuário não encontrado.');
+        // Lógica para lidar com o caso em que o usuário não é encontrado
+      }
+    });
+  };
+  
+  finalizarCompra();
+  
+  
+  

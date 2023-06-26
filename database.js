@@ -71,7 +71,24 @@ async function obterDadosUsuario(email) {
   }
 }
 
+async function registrarPedido(usuarioId, cart) {
+  try {
+    const request = new sql.Request();
 
+    for (const item of cart) {
+      const query = `
+        INSERT INTO pedidos (usuario_id, produto, quantidade, preco, data_pedido)
+        VALUES (${usuarioId}, '${item.produto}', ${item.quantidade}, ${item.preco}, GETDATE())
+      `;
+
+      await request.query(query);
+    }
+
+    console.log('Pedidos registrados com sucesso!');
+  } catch (error) {
+    console.error('Erro ao registrar pedidos:', error);
+  }
+}
 
 
 module.exports = {
@@ -79,6 +96,7 @@ module.exports = {
   cadastrarUsuario: cadastrarUsuario,
   validarLogin: validarLogin,
   obterDadosUsuario: obterDadosUsuario,
+  registrarPedido: registrarPedido,
  
 };
 
