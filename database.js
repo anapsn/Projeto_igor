@@ -71,9 +71,15 @@ async function obterDadosUsuario(email) {
   }
 }
 
+
+
+
 module.exports = {
   conectar: conectar,
   cadastrarUsuario: cadastrarUsuario,
   validarLogin: validarLogin,
-  obterDadosUsuario: obterDadosUsuario
+  obterDadosUsuario: obterDadosUsuario,
+ 
 };
+
+

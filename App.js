@@ -30,6 +30,19 @@ app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/public/login.html');
 });
 
+app.get('/cardapio', (req, res) => {
+  const usuario = req.session.usuario;
+
+  if (usuario) {
+    // O usuário está logado
+    res.sendFile(__dirname + '/public/cardapio.html');
+  } else {
+    // O usuário não está logado
+    res.redirect('/login'); // Redirecionar para a página de login
+  }
+});
+
+
 app.get('/perfil', (req, res) => {
   const usuario = req.session.usuario;
 
@@ -69,9 +82,16 @@ app.post('/login', async (req, res) => {
 
   if (usuario) {
     req.session.usuario = usuario; // Salvar dados do usuário na sessão
-    res.send('Login bem-sucedido!');
     console.log('Usuario logado com sucesso!');
+    console.log('Sessão iniciada:');
+    console.log('nome:', usuario.primeiro_nome, usuario.ultimo_nome);
+    console.log('email:', usuario.email);
+    console.log('email:', usuario.telefone);
+
+    // Redirecionar para a página de perfil após o login
+    res.redirect('/cardapio.html');
   } else {
     res.send('Credenciais inválidas. Tente novamente.');
   }
 });
+
